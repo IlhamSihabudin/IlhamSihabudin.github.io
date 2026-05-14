@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DevCV AI - Skills</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#54433e",
+              "on-background": "#211a18",
+              "border-subtle": "#D9D8D3",
+              "on-tertiary-fixed-variant": "#005049",
+              "on-primary": "#ffffff",
+              "bg-sidebar": "#EEEDE8",
+              "on-error-container": "#93000a",
+              "dark-text": "#F0EFE9",
+              "on-tertiary": "#ffffff",
+              error: "#ba1a1a",
+              "bg-surface": "#FFFFFF",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#ffdbd0",
+              "on-tertiary-container": "#f4fffc",
+              "dark-surface": "#2C2B27",
+              "accent-hover": "#B8644A",
+              "secondary-fixed-dim": "#cac6c1",
+              "surface-bright": "#fff8f6",
+              "on-primary-fixed": "#390c00",
+              "error-container": "#ffdad6",
+              secondary: "#605e5a",
+              outline: "#87736d",
+              "inverse-on-surface": "#fdede9",
+              "primary-container": "#ad5f45",
+              "dark-input": "#3A3935",
+              "surface-container-highest": "#efdfdb",
+              "dark-bg": "#1C1917",
+              "on-primary-fixed-variant": "#75331c",
+              "user-bubble": "#E8E6DF",
+              "on-primary-container": "#fffbff",
+              "inverse-primary": "#ffb59d",
+              "on-tertiary-fixed": "#00201d",
+              tertiary: "#00685f",
+              "surface-tint": "#924a31",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#ffb59d",
+              "text-secondary": "#6B6863",
+              "dark-accent": "#D4896A",
+              "on-secondary-fixed-variant": "#484743",
+              "surface-variant": "#efdfdb",
+              "surface-container": "#faebe6",
+              "surface-container-low": "#fff1ed",
+              "secondary-container": "#e6e2dc",
+              primary: "#8f482f",
+              "on-secondary-fixed": "#1d1b18",
+              "bg-primary": "#F5F4EF",
+              "on-error": "#ffffff",
+              "surface-container-high": "#f4e5e1",
+              "secondary-fixed": "#e6e2dc",
+              "inverse-surface": "#372e2c",
+              "on-surface": "#211a18",
+              "tertiary-fixed-dim": "#77d7ca",
+              "surface-dim": "#e6d7d3",
+              surface: "#fff8f6",
+              "on-secondary-container": "#666460",
+              "tertiary-fixed": "#94f3e6",
+              "outline-variant": "#dac1ba",
+              "tertiary-container": "#0f8378",
+              background: "#fff8f6"
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+            spacing: {
+              "content-max-width": "720px",
+              "container-gap": "24px",
+              "input-padding-y": "16px",
+              "sidebar-width": "260px",
+              "message-gap": "32px",
+              "input-padding-x": "20px"
+            },
+            fontFamily: {
+              "display-md": ["Literata", "serif"],
+              "body-md": ["Manrope", "system-ui", "sans-serif"],
+              "code-inline": ["JetBrains Mono", "monospace"],
+              "label-caps": ["Manrope", "system-ui", "sans-serif"],
+              "body-lg": ["Manrope", "system-ui", "sans-serif"],
+              "display-lg": ["Literata", "serif"]
+            },
+            fontSize: {
+              "display-md": ["28px", { lineHeight: "1.3", fontWeight: "400" }],
+              "body-md": ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+              "code-inline": ["13px", { lineHeight: "1.4", fontWeight: "400" }],
+              "label-caps": ["11px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+              "body-lg": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "display-lg": ["36px", { lineHeight: "1.2", fontWeight: "500" }]
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      body {
+        background-color: #F5F4EF;
+        color: #211a18;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .material-symbols-outlined[data-weight="fill"] {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(135, 115, 109, 0.2);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="font-body-md antialiased h-screen overflow-hidden flex flex-col md:flex-row bg-bg-primary">
+    <!-- Mobile Top App Bar -->
+    <header class="md:hidden flex justify-between items-center px-4 h-16 w-full border-b border-border-subtle/30 bg-background dark:bg-dark-bg shrink-0 z-20">
+      <div class="flex items-center gap-3">
+        <button class="text-primary hover:bg-surface-container-low transition-colors p-2 rounded-md" aria-label="Toggle navigation menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <span class="font-display-md text-[24px] text-primary dark:text-dark-accent">DevCV AI</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="text-secondary hover:bg-surface-container-low transition-colors p-2 rounded-full" aria-label="Profile">
+          <span class="material-symbols-outlined">account_circle</span>
+        </button>
+        <button class="text-secondary hover:bg-surface-container-low transition-colors p-2 rounded-full" aria-label="Settings">
+          <span class="material-symbols-outlined">settings</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Side Navigation (Desktop) -->
+    <nav class="fixed left-0 top-0 h-full w-[260px] hidden lg:flex flex-col p-4 gap-4 bg-bg-sidebar dark:bg-dark-surface z-10 shrink-0" role="navigation" aria-label="Main navigation">
+      <!-- Header Info -->
+      <div class="flex flex-col gap-1 mb-6 px-2 mt-4">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-border-subtle">
+            <img alt="Developer avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGK9l6iR4tWe5EDedeBY9BZcY5qfunb-PwprXMoZJg_Lxm6YsPdVxDgv8lfn9UfgTnsSg16_FUHu8z9k62ypSVpp1WxI1NCTqUggdIu_pSQwFPfHbJDYcdHP3u74RiNOMynExfrfc-oqUGy6O1bEdFOj5c4AXA_1UkXByTqOp93-HpwtaW-PQDv_3gdn0tlfgS1Ep3QCZHMG4-PnVE1WwNkcsxmvLitjYpQGPzltWvhH8X6ZQbVXrnFcxmbWI9lax7l1IxaAMpP1g" />
+          </div>
+          <div>
+            <h2 class="font-body-md font-semibold text-on-surface">Claude Dev</h2>
+            <p class="font-body-md text-[12px] text-secondary">Fullstack Developer</p>
+          </div>
+        </div>
+        <h1 class="font-display-md text-[24px] text-primary mt-2">DevCV AI</h1>
+      </div>
+
+      <!-- Main Nav Links -->
+      <div class="flex-1 overflow-y-auto pr-2 flex flex-col gap-1">
+        <a class="nav-link flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-text-secondary hover:text-primary hover:bg-surface-variant/50 transition-all duration-150 rounded-lg group" href="#about" aria-label="About section">
+          <span class="material-symbols-outlined group-hover:scale-95 duration-100">person</span>
+          <span class="font-label-caps text-label-caps">About</span>
+        </a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-text-secondary hover:text-primary hover:bg-surface-variant/50 transition-all duration-150 rounded-lg group" href="#work-experience" aria-label="Work Experience section">
+          <span class="material-symbols-outlined group-hover:scale-95 duration-100">work</span>
+          <span class="font-label-caps text-label-caps">Work Experience</span>
+        </a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-text-secondary hover:text-primary hover:bg-surface-variant/50 transition-all duration-150 rounded-lg group" href="#education" aria-label="Education section">
+          <span class="material-symbols-outlined group-hover:scale-95 duration-100">school</span>
+          <span class="font-label-caps text-label-caps">Education</span>
+        </a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-text-secondary hover:text-primary hover:bg-surface-variant/50 transition-all duration-150 rounded-lg group" href="#skills" aria-label="Skills section">
+          <span class="material-symbols-outlined group-hover:scale-95 duration-100">terminal</span>
+          <span class="font-label-caps text-label-caps">Skills</span>
+        </a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-text-secondary hover:text-primary hover:bg-surface-variant/50 transition-all duration-150 rounded-lg group" href="#portfolio" aria-label="Portfolio section">
+          <span class="material-symbols-outlined group-hover:scale-95 duration-100">grid_view</span>
+          <span class="font-label-caps text-label-caps">Portfolio</span>
+        </a>
+      </div>
+
+      <!-- Footer Actions -->
+      <div class="mt-auto flex flex-col gap-1 border-t border-border-subtle/30 pt-4">
+        <button class="w-full flex justify-center items-center gap-2 py-2 px-4 bg-primary text-on-primary rounded-lg font-label-caps text-label-caps hover:bg-accent-hover transition-colors shadow-sm mb-4" aria-label="Download resume">
+          <span class="material-symbols-outlined text-[16px]">download</span>
+          Download Resume
+        </button>
+        <a class="nav-link active flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-text-secondary hover:text-primary hover:bg-surface-variant/50 transition-all duration-150 rounded-lg group" href="#awards" aria-current="page" aria-label="Awards section">
+          <span class="material-symbols-outlined" data-weight="fill">emoji_events</span>
+          <span class="font-label-caps text-label-caps">Awards</span>
+        </a>
+        <a class="nav-link flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-text-secondary hover:text-primary hover:bg-surface-variant/50 transition-all duration-150 rounded-lg group" href="#settings" aria-label="Settings">
+          <span class="material-symbols-outlined group-hover:scale-95 duration-100">settings</span>
+          <span class="font-label-caps text-label-caps">Settings</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content Area (Chat Canvas) -->
+    <main class="flex-1 flex flex-col relative w-full lg:ml-[260px] h-[calc(100vh-64px)] md:h-screen">
+      <!-- Conversation Area -->
+      <div class="flex-1 overflow-y-auto px-4 md:px-8 py-8 w-full">
+        <div class="max-w-[720px] mx-auto flex flex-col gap-message-gap pb-32">
+          <!-- Initial System / Greeting Message (Shared) -->
+          <!-- <div class="flex flex-col gap-2 max-w-3xl">
+            <div class="flex items-center gap-3 mb-1">
+              <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[18px]">robot_2</span>
+              </div>
+              <span class="font-body-md font-semibold text-on-surface">DevCV AI</span>
+            </div>
+            <div class="text-on-surface font-body-lg leading-relaxed pl-11">
+              <p class="mb-4">Hello! I'm Claude's interactive portfolio assistant. I can guide you through his work history, showcase his latest projects, or detail his technical skills.</p>
+              <p id="greeting-dynamic">You selected <strong>Awards</strong>. Here is a curated selection of professional recognitions and certifications.</p>
+            </div>
+          </div> -->
+
+          <!-- PORTFOLIO SECTION (Initially Hidden) -->
+          <section id="portfolio-section" style="display: none;">
+            <!-- User Message -->
+            <div class="flex justify-end w-full mt-4">
+              <div class="bg-user-bubble text-on-surface px-5 py-3 rounded-2xl rounded-br-sm max-w-[85%] sm:max-w-[70%] font-body-md">/portfolio</div>
+            </div>
+
+            <!-- Claude Response (Portfolio Grid) -->
+            <div class="flex flex-col gap-2 max-w-3xl mt-2 mb-20">
+              <div class="flex items-center gap-3 mb-1">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+                  <span class="material-symbols-outlined text-[18px]">robot_2</span>
+                </div>
+                <span class="font-body-md font-semibold text-on-surface">DevCV AI</span>
+              </div>
+              <div class="pl-11 w-full">
+                <p class="font-body-md text-on-surface mb-6">Here are some of my recent projects and professional work:</p>
+
+                <!-- Portfolio Grid Display -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  
+                  <!-- Card 1: FinTech Dashboard (LARGE - spans 2 columns) -->
+                  <div class="group md:col-span-2 bg-bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-outline transition-colors shadow-sm">
+                    <!-- Hero Region (192px) -->
+                    <div class="h-48 w-full relative bg-surface-variant overflow-hidden card-gradient-primary">
+                      <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[64px] text-primary/40 group-hover:scale-110 transition-transform duration-300">dashboard_customize</span>
+                      </div>
+                    </div>
+                    <!-- Content Section -->
+                    <div class="p-5">
+                      <h3 class="font-body-md font-semibold text-on-surface mb-2">FinTech Dashboard</h3>
+                      <p class="font-body-md text-[13px] text-secondary mb-4">Real-time financial analytics platform with live market data, portfolio tracking, and AI-powered insights for retail investors.</p>
+                      <!-- Tech Badges -->
+                      <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-surface-container-high rounded text-xs font-code-inline text-on-surface-variant">React</span>
+                        <span class="px-3 py-1 bg-surface-container-high rounded text-xs font-code-inline text-on-surface-variant">TypeScript</span>
+                        <span class="px-3 py-1 bg-surface-container-high rounded text-xs font-code-inline text-on-surface-variant">Tailwind</span>
+                      </div>
+                      <!-- External Link Button -->
+                      <a href="#" class="mt-4 inline-flex items-center gap-2 text-primary hover:text-accent-hover font-body-md text-[13px] transition-colors">
+                        View Project <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Card 2: E-Commerce API (SMALL) -->
+                  <div class="group bg-bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-outline transition-colors shadow-sm">
+                    <!-- Hero Region (128px) -->
+                    <div class="h-32 w-full relative bg-surface-variant overflow-hidden card-gradient-secondary">
+                      <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[48px] text-secondary/40 group-hover:scale-110 transition-transform duration-300">shopping_bag</span>
+                      </div>
+                    </div>
+                    <!-- Content Section -->
+                    <div class="p-4">
+                      <h3 class="font-body-md font-semibold text-on-surface mb-1">E-Commerce API</h3>
+                      <p class="font-body-md text-[13px] text-secondary mb-3 line-clamp-2">Scalable REST API for online retail with product management, order processing, and payment integration.</p>
+                      <!-- Tech Badges -->
+                      <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-inline text-on-surface-variant">Node.js</span>
+                        <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-inline text-on-surface-variant">PostgreSQL</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Card 3: Editorial CMS (SMALL) -->
+                  <div class="group bg-bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-outline transition-colors shadow-sm">
+                    <!-- Hero Region (128px) -->
+                    <div class="h-32 w-full relative bg-surface-variant overflow-hidden card-gradient-tertiary">
+                      <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[48px] text-tertiary/40 group-hover:scale-110 transition-transform duration-300">article</span>
+                      </div>
+                    </div>
+                    <!-- Content Section -->
+                    <div class="p-4">
+                      <h3 class="font-body-md font-semibold text-on-surface mb-1">Editorial CMS</h3>
+                      <p class="font-body-md text-[13px] text-secondary mb-3 line-clamp-2">Headless content management system for publishing blogs, articles, and rich media with versioning control.</p>
+                      <!-- Tech Badges -->
+                      <div class="flex gap-2">
+                        <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-inline text-on-surface-variant">Next.js</span>
+                        <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-inline text-on-surface-variant">Strapi</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mt-6 font-body-md text-secondary italic">Would you like to know more about any of these projects, or explore other sections?</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- AWARDS SECTION (Initially Visible) -->
+          <section id="awards-section" style="display: block;">
+            <!-- User Message -->
+            <div class="flex justify-end w-full mt-4">
+              <div class="bg-user-bubble text-on-surface px-5 py-3 rounded-2xl rounded-br-sm max-w-[85%] sm:max-w-[70%] font-body-md">/awards</div>
+            </div>
+
+            <!-- Claude Response (Awards Grid) -->
+            <div class="flex flex-col gap-2 max-w-3xl mt-2">
+              <div class="flex items-center gap-3 mb-1">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+                  <span class="material-symbols-outlined text-[18px]">robot_2</span>
+                </div>
+                <span class="font-body-md font-semibold text-on-surface">DevCV AI</span>
+              </div>
+              <div class="pl-11 w-full">
+                <p class="font-body-md text-on-surface mb-6">Here is a selection of my professional recognitions and certifications:</p>
+
+                <!-- Awards Grid Display -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Award Card 1: First Place -->
+                <div class="bg-surface-container-lowest p-6 rounded-xl border border-border-subtle/50 flex flex-col gap-3 relative overflow-hidden group hover:border-primary/30 transition-colors">
+                  <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110" aria-hidden="true"></div>
+                  <div class="flex items-start gap-4 z-10">
+                    <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+                      <span class="material-symbols-outlined" data-weight="fill">workspace_premium</span>
+                    </div>
+                    <div>
+                      <h3 class="font-body-md text-body-md font-semibold text-on-surface mb-1">First Place</h3>
+                      <p class="font-body-md text-body-md text-text-secondary">Tech-Innovation Hackathon 2023</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Award Card 2: AWS Certified -->
+                <div class="bg-surface-container-lowest p-6 rounded-xl border border-border-subtle/50 flex flex-col gap-3 relative overflow-hidden group hover:border-primary/30 transition-colors">
+                  <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110" aria-hidden="true"></div>
+                  <div class="flex items-start gap-4 z-10">
+                    <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+                      <span class="material-symbols-outlined" data-weight="fill">verified</span>
+                    </div>
+                    <div>
+                      <h3 class="font-body-md text-body-md font-semibold text-on-surface mb-1">AWS Certified</h3>
+                      <p class="font-body-md text-body-md text-text-secondary">Solutions Architect - Associate</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Award Card 3: Top Performer Award (spans full width) -->
+                <div class="bg-surface-container-lowest p-6 rounded-xl border border-border-subtle/50 flex flex-col gap-3 relative overflow-hidden group hover:border-primary/30 transition-colors md:col-span-2">
+                  <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110" aria-hidden="true"></div>
+                  <div class="flex items-start gap-4 z-10">
+                    <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+                      <span class="material-symbols-outlined" data-weight="fill">military_tech</span>
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-body-md text-body-md font-semibold text-on-surface mb-1">Top Performer Award 2022</h3>
+                      <p class="font-body-md text-body-md text-text-secondary mb-2">TechCorp Inc.</p>
+                      <p class="font-body-md text-body-md text-secondary text-sm">Recognized for leading the successful migration of legacy systems to a modern cloud infrastructure, reducing operational costs by 30%.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 font-body-md text-secondary italic">Would you like to know more about any of these awards, or explore my other experiences?</div>
+            </div>
+          </div>
+          </section>
+
+          <!-- EDUCATION SECTION (Initially Hidden) -->
+          <section id="education-section" style="display: none;">
+            <!-- User Message -->
+            <div class="flex justify-end w-full mt-4">
+              <div class="bg-user-bubble text-on-surface px-5 py-3 rounded-2xl rounded-br-sm max-w-[85%] sm:max-w-[70%] font-body-md">/education</div>
+            </div>
+
+            <!-- Claude Response (Education Details) -->
+            <div class="flex flex-col gap-2 max-w-3xl mt-2">
+              <div class="flex items-center gap-3 mb-1">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+                  <span class="material-symbols-outlined text-[18px]">robot_2</span>
+                </div>
+                <span class="font-body-md font-semibold text-on-surface">DevCV AI</span>
+              </div>
+              <div class="pl-11 w-full">
+                <p class="font-body-md text-on-surface mb-6">Here is a summary of my educational background, focusing on Computer Science and relevant achievements.</p>
+
+                <!-- Education Entries -->
+                <div class="space-y-8">
+                  <!-- University of Technology -->
+                  <div class="border-t border-border-subtle/40 pt-6 pb-2">
+                    <h3 class="font-display-md text-on-surface mb-2">University of Technology</h3>
+                    <p class="font-body-md text-on-surface-variant mb-4">Bachelor of Science in Computer Science | Graduated 2023</p>
+                    <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                      <li><span class="font-semibold text-on-surface">Relevant Coursework:</span> Data Structures &amp; Algorithms, Machine Learning, Database Systems, Web Development.</li>
+                      <li><span class="font-semibold text-on-surface">Honors:</span> Summa Cum Laude, Dean's List (All Semesters), Outstanding Capstone Project Award.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Global Institute of Technology -->
+                  <div class="border-t border-border-subtle/40 pt-6 pb-2">
+                    <h3 class="font-display-md text-on-surface mb-2">Global Institute of Technology</h3>
+                    <p class="font-body-md text-on-surface-variant mb-4">Master of Science in Artificial Intelligence | Graduated 2021</p>
+                    <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                      <li><span class="font-semibold text-on-surface">Specialization:</span> Specialized in Machine Learning and Neural Networks. Thesis on "Autonomous Navigation Systems".</li>
+                    </ul>
+                  </div>
+
+                  <!-- City College of Engineering -->
+                  <div class="border-t border-border-subtle/40 pt-6 pb-2">
+                    <h3 class="font-display-md text-on-surface mb-2">City College of Engineering</h3>
+                    <p class="font-body-md text-on-surface-variant mb-4">Associate Degree in Software Development | Graduated 2018</p>
+                    <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                      <li><span class="font-semibold text-on-surface">Details:</span> Foundation in algorithms, web development, and database management. Dean's List for 4 consecutive semesters.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SKILLS SECTION (Initially Hidden) -->
+          <section id="skills-section" style="display: none;">
+            <!-- User Message -->
+            <div class="flex justify-end w-full mt-4">
+              <div class="bg-user-bubble text-on-surface px-5 py-3 rounded-2xl rounded-br-sm max-w-[85%] sm:max-w-[70%] font-body-md">/skills</div>
+            </div>
+
+            <!-- Claude Response (Skills Grid) -->
+            <div class="flex flex-col gap-2 max-w-3xl mt-2">
+              <div class="flex items-center gap-3 mb-1">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+                  <span class="material-symbols-outlined text-[18px]">robot_2</span>
+                </div>
+                <span class="font-body-md font-semibold text-on-surface">DevCV AI</span>
+              </div>
+              <div class="pl-11 w-full">
+                <p class="font-body-md text-on-surface mb-6">Here is an overview of my technical capabilities, organized by domain. I focus on building robust, scalable fullstack applications.</p>
+
+                <!-- Skills Bento Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- Frontend Card -->
+                  <div class="bg-surface-container-lowest p-5 rounded-xl border border-border-subtle shadow-sm flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-text-secondary border-b border-border-subtle/40 pb-2">
+                      <span class="material-symbols-outlined text-[18px]">web</span>
+                      <h3 class="font-label-caps text-label-caps tracking-widest uppercase">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/30">React</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/30">TypeScript</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/30">Tailwind CSS</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant/40 text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/20 text-opacity-70">Next.js</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant/40 text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/20 text-opacity-70">Redux</span>
+                    </div>
+                  </div>
+
+                  <!-- Backend Card -->
+                  <div class="bg-surface-container-lowest p-5 rounded-xl border border-border-subtle shadow-sm flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-text-secondary border-b border-border-subtle/40 pb-2">
+                      <span class="material-symbols-outlined text-[18px]">dns</span>
+                      <h3 class="font-label-caps text-label-caps tracking-widest uppercase">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/30">Node.js</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/30">PostgreSQL</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant/40 text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/20 text-opacity-70">Express</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant/40 text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/20 text-opacity-70">GraphQL</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant/40 text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/20 text-opacity-70">Redis</span>
+                    </div>
+                  </div>
+
+                  <!-- Tools & Infrastructure Card (Spans full width) -->
+                  <div class="bg-surface-container-lowest p-5 rounded-xl border border-border-subtle shadow-sm flex flex-col gap-4 md:col-span-2">
+                    <div class="flex items-center gap-2 text-text-secondary border-b border-border-subtle/40 pb-2">
+                      <span class="material-symbols-outlined text-[18px]">build</span>
+                      <h3 class="font-label-caps text-label-caps tracking-widest uppercase">Tools &amp; Infrastructure</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/30">Docker</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/30">AWS</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/30">Git</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant/40 text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/20 text-opacity-70">CI/CD Pipeline</span>
+                      <span class="inline-flex items-center px-2.5 py-1 bg-surface-variant/40 text-on-surface-variant rounded-md font-code-inline text-code-inline border border-border-subtle/20 text-opacity-70">Jest</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Input Area (Docked Bottom) -->
+      <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-bg-primary via-bg-primary to-transparent pt-12 pb-6 px-4 md:px-8">
+        <div class="max-w-[720px] mx-auto relative">
+          <!-- Suggestion Chips -->
+          <div class="flex flex-nowrap overflow-x-auto gap-2 mb-3 pb-2 scrollbar-hide no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+            <button class="chip shrink-0 px-3 py-1.5 bg-surface-container border border-border-subtle rounded-full font-code-inline text-[12px] text-secondary hover:text-on-surface hover:bg-surface-variant hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200" aria-label="Chip: /about">/about</button>
+            <button class="chip shrink-0 px-3 py-1.5 bg-surface-container border border-border-subtle rounded-full font-code-inline text-[12px] text-secondary hover:text-on-surface hover:bg-surface-variant hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200" aria-label="Chip: /work-experience">/work-experience</button>
+            <button class="chip shrink-0 px-3 py-1.5 bg-surface-container border border-border-subtle rounded-full font-code-inline text-[12px] text-secondary hover:text-on-surface hover:bg-surface-variant hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200" aria-label="Chip: /education">/education</button>
+            <button class="chip shrink-0 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-full font-code-inline text-[12px] text-primary shadow-sm ring-1 ring-primary/20" aria-label="Chip: /skills (active)" aria-pressed="true">/skills</button>
+            <!-- Other Chips -->
+            <button class="chip shrink-0 px-3 py-1.5 bg-surface-container border border-border-subtle rounded-full font-code-inline text-[12px] text-secondary hover:text-on-surface hover:bg-surface-variant hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200" aria-label="Chip: /portfolio">/portfolio</button>
+            <button class="chip shrink-0 px-3 py-1.5 bg-surface-container border border-border-subtle rounded-full font-code-inline text-[12px] text-secondary hover:text-on-surface hover:bg-surface-variant hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200" aria-label="Chip: /awards">/awards</button>
+          </div>
+
+          <!-- Main Input Bar -->
+          <div class="relative bg-bg-surface border border-border-subtle rounded-[16px] shadow-sm focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary/50 transition-all duration-200 flex flex-col min-h-[60px]">
+            <textarea class="w-full bg-transparent border-none resize-none focus:ring-0 py-4 px-5 text-on-surface font-body-md placeholder-secondary/70 max-h-[150px]" placeholder="Ask about my projects, skills, or experience..." rows="1" aria-label="Message input"></textarea>
+            <div class="flex justify-between items-center px-3 pb-3 pt-1">
+              <div class="flex items-center gap-1">
+                <button class="p-2 text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors" title="Attach file" aria-label="Attach file">
+                  <span class="material-symbols-outlined text-[20px]">attach_file</span>
+                </button>
+              </div>
+              <button class="w-8 h-8 rounded-lg bg-surface-variant text-secondary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-200" title="Send message" aria-label="Send message">
+                <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+              </button>
+            </div>
+          </div>
+          <div class="text-center mt-2">
+            <span class="font-body-md text-[11px] text-secondary/60">DevCV AI can make mistakes. Consider verifying important technical details.</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
