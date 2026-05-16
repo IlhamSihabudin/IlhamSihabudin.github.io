@@ -196,6 +196,10 @@ textarea {
 }
 
 /* Suggestion Chips */
+.chip-strip {
+  overflow-y: visible;
+}
+
 .chip {
   transition: all 120ms ease;
 }
