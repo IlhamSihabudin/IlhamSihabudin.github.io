@@ -286,24 +286,26 @@
           <section id="about-section" style="display: none;">
             <!-- Welcome/Context Header -->
             <div class="flex flex-col items-center text-center pb-8 mb-4 border-b border-border-subtle/30 opacity-70">
-              <h1 class="font-display-lg text-display-lg text-primary mb-2">Mis AI</h1>
+              <h1 class="font-display-lg text-display-lg text-primary mb-2">Mis <span class="text-on-surface">AI</span></h1>
               <p class="font-body-md text-body-md text-text-secondary">Interactive Professional Profile</p>
             </div>
 
             <!-- User Message -->
             <div class="flex justify-end w-full mt-4">
-              <div class="bg-user-bubble text-on-surface px-5 py-3 rounded-2xl rounded-br-sm max-w-[85%] sm:max-w-[70%] font-code-inline text-code-inline shadow-sm border border-border-subtle/40">
+              <div class="bg-user-bubble text-on-surface px-5 py-3 rounded-2xl rounded-br-sm max-w-[85%] sm:max-w-[70%] font-body-md">
                 /about
               </div>
             </div>
 
             <!-- Claude Response (About Summary) -->
-            <div class="flex w-full gap-4 mt-2">
-              <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 border border-outline-variant/30 text-primary mt-1">
-                <span class="material-symbols-outlined text-[18px]">robot_2</span>
+            <div class="flex flex-col gap-2 max-w-3xl mt-2">
+              <div class="flex items-center gap-3 mb-1">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+                  <span class="material-symbols-outlined text-[18px]">robot_2</span>
+                </div>
+                <span class="font-body-md font-semibold text-on-surface">Mis AI</span>
               </div>
-              <div class="flex flex-col gap-2 min-w-0 max-w-[calc(100%-48px)]">
-                <div class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Mis AI</div>
+              <div class="pl-0 sm:pl-11 w-full">
                 <div class="font-body-lg text-body-lg text-on-surface leading-relaxed">
                   <p>I am a full-stack developer with 5 years of experience building and optimizing systems. I am used to working in Agile Scrum environments, have a good understanding of microservices architecture, and can work both independently and collaboratively. In the long term, I want to build scalable, efficient, and high-performance applications that support business needs.</p>
                 </div>
@@ -348,7 +350,7 @@
             <!-- User Message -->
             <div class="flex justify-end w-full mt-4">
               <div class="bg-user-bubble text-on-surface px-5 py-3 rounded-2xl rounded-br-sm max-w-[85%] sm:max-w-[70%] font-body-md">
-                Can you detail your work experience? Specifically focusing on the last 5 years.
+                /work-experience
               </div>
             </div>
 

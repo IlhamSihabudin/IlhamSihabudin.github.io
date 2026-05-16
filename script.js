@@ -348,6 +348,7 @@ function showChatLimitModal() {
   const modal = document.getElementById('chat-limit-modal');
   if (!modal) return;
 
+  modal.classList.remove('is-closing');
   modal.classList.remove('hidden');
   modal.classList.add('flex');
 }
@@ -356,8 +357,13 @@ function hideChatLimitModal() {
   const modal = document.getElementById('chat-limit-modal');
   if (!modal) return;
 
-  modal.classList.add('hidden');
-  modal.classList.remove('flex');
+  if (modal.classList.contains('hidden') || modal.classList.contains('is-closing')) return;
+
+  modal.classList.add('is-closing');
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex', 'is-closing');
+  }, 160);
 }
 
 function setupChatLimitModal() {
