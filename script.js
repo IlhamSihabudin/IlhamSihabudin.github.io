@@ -256,11 +256,15 @@ function updateActiveSuggestionChip(sectionId) {
 }
 
 function getSystemTheme() {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 function getSavedThemePreference() {
-  return localStorage.getItem(THEME_STORAGE_KEY) || 'system';
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY) || 'system';
+  } catch (error) {
+    return 'system';
+  }
 }
 
 function applyThemePreference(preference) {
@@ -268,6 +272,7 @@ function applyThemePreference(preference) {
 
   document.documentElement.classList.toggle('dark', resolvedTheme === 'dark');
   document.documentElement.classList.toggle('light', resolvedTheme === 'light');
+  document.documentElement.dataset.theme = resolvedTheme;
   document.documentElement.dataset.themePreference = preference;
 
   updateThemeControls(preference);
@@ -301,7 +306,7 @@ function setupThemeSettings() {
   const themeButtons = document.querySelectorAll('[data-theme-option]');
   const saveButton = document.getElementById('settings-save');
   const cancelButton = document.getElementById('settings-cancel');
-  const systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const systemThemeQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
   themeButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -312,7 +317,11 @@ function setupThemeSettings() {
 
   if (saveButton) {
     saveButton.addEventListener('click', () => {
-      localStorage.setItem(THEME_STORAGE_KEY, pendingTheme);
+      try {
+        localStorage.setItem(THEME_STORAGE_KEY, pendingTheme);
+      } catch (error) {
+        console.warn('Theme preference could not be saved:', error.message);
+      }
       applyThemePreference(pendingTheme);
       showSection('about');
     });
@@ -326,11 +335,13 @@ function setupThemeSettings() {
     });
   }
 
-  systemThemeQuery.addEventListener('change', () => {
-    if (getSavedThemePreference() === 'system') {
-      applyThemePreference('system');
-    }
-  });
+  if (systemThemeQuery && systemThemeQuery.addEventListener) {
+    systemThemeQuery.addEventListener('change', () => {
+      if (getSavedThemePreference() === 'system') {
+        applyThemePreference('system');
+      }
+    });
+  }
 }
 
 function showChatLimitModal() {

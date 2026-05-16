@@ -2,12 +2,34 @@
 /* This file provides precise overrides and custom rules for design tokens */
 
 :root {
+  color-scheme: light;
   --rounded-sm: 0.25rem;
   --rounded-default: 0.5rem;
   --rounded-md: 0.75rem;
   --rounded-lg: 1rem;
   --rounded-xl: 1.5rem;
   --rounded-full: 9999px;
+  --dark-bg: #1C1917;
+  --dark-bg-subtle: #221F1C;
+  --dark-surface-muted: #26231F;
+  --dark-surface: #2C2B27;
+  --dark-surface-raised: #34322E;
+  --dark-input: #3A3935;
+  --dark-user-bubble: #3A342F;
+  --dark-text: #F0EFE9;
+  --dark-text-secondary: #C8C3BA;
+  --dark-text-muted: #928C82;
+  --dark-border: #494641;
+  --dark-border-subtle: #393631;
+  --dark-accent: #D4896A;
+  --dark-accent-hover: #E09A7B;
+  --dark-code-bg: #25221F;
+  --dark-error: #FFB4AB;
+}
+
+html.dark,
+html[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 /* Typography Fallbacks */
@@ -15,6 +37,24 @@ body {
   font-family: 'Manrope', system-ui, sans-serif;
   background-color: #F5F4EF;
   color: #211a18;
+}
+
+body,
+.sidebar,
+.surface,
+.input-bar,
+.message-bubble,
+.nav-link,
+.chip,
+.settings-dialog,
+.settings-theme-card,
+.settings-theme-toggle,
+.theme-option {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 @supports (height: 100dvh) {
@@ -29,6 +69,37 @@ h1, h2, h3, h4, h5, h6 {
 
 code, pre {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.linkedin-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: rgba(143, 72, 47, 0.12);
+  color: #8f482f;
+  border: 1px solid rgba(143, 72, 47, 0.24);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+code {
+  border-radius: 6px;
+  padding: 0.1em 0.35em;
+  background: #fff1ed;
+  border: 1px solid rgba(218, 193, 186, 0.8);
+}
+
+pre {
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  background: #fff1ed;
+  border: 1px solid rgba(218, 193, 186, 0.8);
 }
 
 /* Scrollbar Styling */
@@ -107,10 +178,6 @@ textarea {
 }
 
 /* Hover Effects */
-.nav-link {
-  transition: all 150ms ease;
-}
-
 .nav-link:hover {
   background-color: rgba(239, 223, 219, 0.5);
   color: #8f482f;
@@ -126,13 +193,6 @@ textarea {
 
 .nav-link.active .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-
-@media (prefers-color-scheme: dark) {
-  .nav-link.active {
-    background-color: #3A3935;
-    color: #D4896A;
-  }
 }
 
 /* Suggestion Chips */
@@ -330,8 +390,8 @@ section[id$="-section"].fade-out {
 
 /* Dark Mode */
 html.dark body {
-  background-color: #1C1917;
-  color: #F0EFE9;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 html.light body {
@@ -380,130 +440,271 @@ html.light .chip:hover {
 }
 
 html.dark .bg-bg-primary {
-  background-color: #1C1917;
+  background-color: var(--dark-bg);
 }
 
 html.dark .bg-background {
-  background-color: #1C1917;
+  background-color: var(--dark-bg);
 }
 
 html.dark .bg-bg-sidebar {
-  background-color: #2C2B27;
+  background-color: var(--dark-surface-muted);
 }
 
 html.dark .text-on-surface {
-  color: #F0EFE9;
+  color: var(--dark-text);
 }
 
 html.dark .text-secondary,
 html.dark .text-text-secondary,
 html.dark .text-on-surface-variant {
-  color: #cac6c1;
+  color: var(--dark-text-secondary);
 }
 
 html.dark .border-border-subtle,
 html.dark .border-outline-variant\/30 {
-  border-color: #3A3935;
+  border-color: var(--dark-border-subtle);
 }
 
 html.dark .bg-bg-surface,
 html.dark .bg-surface-container-lowest {
-  background-color: #2C2B27;
+  background-color: var(--dark-surface);
 }
 
-html.dark .bg-user-bubble,
+html.dark .bg-user-bubble {
+  background-color: var(--dark-user-bubble);
+}
+
 html.dark .bg-surface-container,
 html.dark .bg-surface-container-low,
 html.dark .bg-surface-container-high,
 html.dark .bg-surface-variant {
-  background-color: #3A3935;
+  background-color: var(--dark-surface-raised);
 }
 
 html.dark .from-bg-primary {
-  --tw-gradient-from: #1C1917 var(--tw-gradient-from-position);
+  --tw-gradient-from: var(--dark-bg) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(28 25 23 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 html.dark .via-bg-primary {
   --tw-gradient-to: rgb(28 25 23 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #1C1917 var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--dark-bg) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+html.dark .text-primary,
+html.dark .text-dark-accent,
+html.dark .hover\:text-primary:hover {
+  color: var(--dark-accent);
+}
+
+html.dark .linkedin-icon {
+  background: rgba(212, 137, 106, 0.14);
+  color: var(--dark-accent);
+  border-color: rgba(212, 137, 106, 0.32);
+}
+
+html.dark .hover\:text-accent-hover:hover {
+  color: var(--dark-accent-hover);
+}
+
+html.dark .bg-primary,
+html.dark .bg-dark-accent {
+  background-color: var(--dark-accent);
+  color: #211a18;
+}
+
+html.dark .hover\:bg-accent-hover:hover,
+html.dark .hover\:bg-primary:hover {
+  background-color: var(--dark-accent-hover);
+  color: #211a18;
+}
+
+html.dark .bg-primary\/10 {
+  background-color: rgba(212, 137, 106, 0.14);
+}
+
+html.dark .border-primary\/20,
+html.dark .border-primary\/30,
+html.dark .hover\:border-primary\/30:hover {
+  border-color: rgba(212, 137, 106, 0.32);
+}
+
+html.dark .ring-primary\/20,
+html.dark .focus-within\:ring-primary\/40:focus-within {
+  --tw-ring-color: rgba(212, 137, 106, 0.22);
+}
+
+html.dark .focus-within\:border-primary\/50:focus-within {
+  border-color: var(--dark-accent);
+}
+
+html.dark .nav-link:hover {
+  background-color: rgba(240, 239, 233, 0.06);
+  color: var(--dark-accent);
+}
+
+html.dark .nav-link.active {
+  background-color: rgba(212, 137, 106, 0.14);
+  color: var(--dark-text);
+  border-color: rgba(212, 137, 106, 0.28);
+  box-shadow: none;
+}
+
+html.dark .chip {
+  box-shadow: none;
+}
+
+html.dark .chip:hover {
+  transform: translateY(-2px);
+  background-color: rgba(240, 239, 233, 0.06);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+  box-shadow: none;
+}
+
+html.dark textarea::placeholder {
+  color: var(--dark-text-muted);
+}
+
+html.dark input:focus-visible,
+html.dark textarea:focus-visible,
+html.dark button:focus-visible,
+html.dark *:focus-visible {
+  outline-color: var(--dark-accent);
+}
+
+html.dark code,
+html.dark pre {
+  background: var(--dark-code-bg);
+  color: #F3EDE7;
+  border-color: var(--dark-border-subtle);
+}
+
+html.dark .card-shadow,
+html.dark .shadow-sm,
+html.dark .hover\:shadow-md:hover,
+html.dark .hover\:shadow-sm:hover {
+  box-shadow: none;
+}
+
+html.dark .card-gradient-primary {
+  background: linear-gradient(135deg, #2C2B27 0%, #3A342F 100%);
+}
+
+html.dark .card-gradient-secondary {
+  background: linear-gradient(45deg, #26231F 0%, #34322E 100%);
+}
+
+html.dark .card-gradient-tertiary {
+  background: linear-gradient(225deg, #22312E 0%, #2C2B27 100%);
 }
 
 html.dark .settings-backdrop {
-  background: rgba(0, 0, 0, 0.42);
+  background: rgba(10, 8, 7, 0.48);
 }
 
 html.dark .settings-dialog {
-  border-color: #3A3935;
-  background: #2C2B27;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+  border-color: var(--dark-border);
+  background: var(--dark-surface-raised);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
 html.dark .settings-theme-card {
-  border-color: #3A3935;
-  background: #1C1917;
+  border-color: var(--dark-border);
+  background: var(--dark-surface);
+  box-shadow: none;
 }
 
 html.dark .settings-theme-toggle {
-  background: #3A3935;
+  background: var(--dark-input);
 }
 
 html.dark .theme-option {
-  color: #cac6c1;
+  color: var(--dark-text-secondary);
 }
 
 html.dark .theme-option:hover {
-  color: #F0EFE9;
+  color: var(--dark-text);
+  background: rgba(240, 239, 233, 0.06);
 }
 
 html.dark .theme-option.active {
-  border-color: #4d4a45;
-  background: #2C2B27;
-  color: #D4896A;
+  border-color: rgba(212, 137, 106, 0.32);
+  background: rgba(212, 137, 106, 0.14);
+  color: var(--dark-text);
+  box-shadow: none;
 }
 
 html.dark .settings-theme-status {
-  color: #cac6c1;
+  color: var(--dark-text-secondary);
 }
 
 html.dark .settings-actions {
-  border-color: #3A3935;
-  background: rgba(58, 57, 53, 0.48);
+  border-color: var(--dark-border);
+  background: var(--dark-surface);
 }
 
 html.dark .settings-cancel {
-  color: #F0EFE9;
+  color: var(--dark-text);
 }
 
 html.dark .settings-cancel:hover {
-  background: rgba(77, 74, 69, 0.6);
+  background: rgba(240, 239, 233, 0.06);
+}
+
+html.dark #chat-limit-modal {
+  background-color: rgba(10, 8, 7, 0.48);
+}
+
+html.dark #chat-limit-modal > div {
+  background-color: var(--dark-surface-raised);
+  border-color: var(--dark-border);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+html.dark #chat-input-area > div > .relative {
+  background-color: var(--dark-input);
+  border-color: var(--dark-border-subtle);
+}
+
+html.dark #chat-input-area > div > .relative:focus-within {
+  border-color: var(--dark-accent);
+  box-shadow: 0 0 0 2px rgba(212, 137, 106, 0.22);
+}
+
+html.dark .bg-on-background\/20,
+html.dark .bg-on-background\/30 {
+  background-color: rgba(10, 8, 7, 0.48);
+}
+
+html.dark .text-secondary\/60 {
+  color: rgba(200, 195, 186, 0.7);
+}
+
+html.dark .text-white {
+  color: #211a18;
+}
+
+html.dark .hover\:bg-surface-container:hover,
+html.dark .hover\:bg-surface-container-low:hover,
+html.dark .hover\:bg-surface-variant:hover,
+html.dark .hover\:bg-surface-variant\/50:hover {
+  background-color: rgba(240, 239, 233, 0.06);
+}
+
+html.dark .hover\:text-on-primary:hover {
+  color: #211a18;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(212, 137, 106, 0.2);
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1C1917;
-    color: #F0EFE9;
-  }
-
   ::-webkit-scrollbar-thumb {
     background-color: rgba(212, 137, 106, 0.2);
-  }
-
-  .nav-link:hover {
-    background-color: rgba(44, 43, 39, 0.5);
-    color: #D4896A;
-  }
-
-  .nav-link.active {
-    background-color: #2C2B27;
-    color: #D4896A;
-    border-color: #3A3935;
-  }
-
-  .chip:hover {
-    background-color: #3A3935;
-    color: #F0EFE9;
   }
 }
 
@@ -511,6 +712,41 @@ html.dark .settings-cancel:hover {
 *:focus-visible {
   outline: 2px solid #8f482f;
   outline-offset: 2px;
+}
+
+html.dark *:focus-visible {
+  outline-color: var(--dark-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .sidebar,
+  .surface,
+  .input-bar,
+  .message-bubble,
+  .nav-link,
+  .chip,
+  .settings-dialog,
+  .settings-theme-card,
+  .settings-theme-toggle,
+  .theme-option,
+  section[id$="-section"] {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  html.dark .text-secondary,
+  html.dark .text-text-secondary,
+  html.dark .text-on-surface-variant {
+    color: var(--dark-text);
+  }
+
+  html.dark .border-border-subtle,
+  html.dark .border-outline-variant\/30 {
+    border-color: var(--dark-border);
+  }
 }
 
 /* Line height overrides for display text */
