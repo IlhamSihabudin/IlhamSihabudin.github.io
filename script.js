@@ -2,6 +2,7 @@
 
 const SECTION_IDS = ['about', 'work-experience', 'education', 'skills', 'portfolio', 'awards', 'settings'];
 const THEME_STORAGE_KEY = 'devcv-theme-preference';
+let lastContentSectionId = 'about';
 
 const SECTION_ALIASES = [
   { sectionId: 'work-experience', aliases: ['/work-experience', '/experience', 'work experience', 'experience'] },
@@ -73,6 +74,10 @@ function showSection(sectionId) {
 
   const selectedSection = document.getElementById(sectionId + '-section');
   if (!selectedSection) return false;
+
+  if (sectionId !== 'settings') {
+    lastContentSectionId = sectionId;
+  }
 
   const currentSection = document.querySelector('section[id$="-section"][style*="display: block"]');
 
@@ -323,7 +328,7 @@ function setupThemeSettings() {
         console.warn('Theme preference could not be saved:', error.message);
       }
       applyThemePreference(pendingTheme);
-      showSection('about');
+      showSection(lastContentSectionId);
     });
   }
 
@@ -331,7 +336,7 @@ function setupThemeSettings() {
     cancelButton.addEventListener('click', () => {
       pendingTheme = getSavedThemePreference();
       applyThemePreference(pendingTheme);
-      showSection('about');
+      showSection(lastContentSectionId);
     });
   }
 

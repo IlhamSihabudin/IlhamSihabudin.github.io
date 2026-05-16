@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Muhamad Ilham Sihabudin - Full-Stack Developer</title>
+  <desc id="desc">Minimal open graph preview with name and technical focus areas.</desc>
+  <rect width="1200" height="630" fill="#FFF8F6"/>
+  <rect width="1200" height="630" fill="#8F482F" opacity="0.025"/>
+
+  <g transform="translate(0 86)">
+    <text
+      x="42"
+      y="56"
+      fill="#8F482F"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="34"
+      font-weight="700"
+      letter-spacing="10"
+    >FULL-STACK DEVELOPER</text>
+
+    <text
+      x="42"
+      y="200"
+      fill="#211A18"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="112"
+      font-weight="700"
+    >Muhamad</text>
+
+    <text
+      x="42"
+      y="336"
+      fill="#8F482F"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="112"
+      font-weight="700"
+    >Ilham Sihabudin</text>
+  </g>
+
+</svg>

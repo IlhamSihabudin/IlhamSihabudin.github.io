@@ -216,6 +216,19 @@ textarea {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
+.portfolio-download-card {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.portfolio-download-card:hover {
+  border-color: rgba(143, 72, 47, 0.3);
+  box-shadow: 0 4px 14px rgba(33, 26, 24, 0.08);
+}
+
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;
@@ -657,6 +670,16 @@ html.dark .card-gradient-secondary {
 
 html.dark .card-gradient-tertiary {
   background: linear-gradient(225deg, #22312E 0%, #2C2B27 100%);
+}
+
+html.dark .portfolio-download-card {
+  background-color: var(--dark-surface);
+  border-color: var(--dark-border-subtle);
+}
+
+html.dark .portfolio-download-card:hover {
+  border-color: rgba(212, 137, 106, 0.32);
+  box-shadow: none;
 }
 
 html.dark .settings-backdrop {
